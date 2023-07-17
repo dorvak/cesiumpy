@@ -481,17 +481,18 @@ class Cylinder(_CesiumEntity):
     """
 
     _klass = 'cylinder'
-    _props = ['length', 'topRadius', 'bottomRadius', 'slices']
+    _props = ['length', 'topRadius', 'bottomRadius', 'slices', 'heightReference']
 
     length = traitlets.Float()
     topRadius = traitlets.Float()
     bottomRadius = traitlets.Float()
     slices = traitlets.Float(allow_none=True)
+    heightReference = traitlets.Instance(klass=constants.HeightReference, allow_none=True)
 
     def __init__(self, position, length, topRadius, bottomRadius,
                  show=None, fill=None, material=None,
                  outline=None, outlineColor=None, outlineWidth=None,
-                 numberOfVerticalLines=None, slices=None,
+                 numberOfVerticalLines=None, slices=None,heightReference=None,
                  name=None):
 
         super(Cylinder, self).__init__(show=show, fill=fill, material=material,
@@ -503,6 +504,7 @@ class Cylinder(_CesiumEntity):
         self.topRadius = topRadius
         self.bottomRadius = bottomRadius
         self.slices = slices
+        self.heightReference = heightReference
 
 
 class Polyline(_CesiumEntity):

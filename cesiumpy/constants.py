@@ -12,6 +12,11 @@ class VerticalOrigin(_CesiumEnum):
     CENTER = 'Cesium.VerticalOrigin.CENTER'
     TOP = 'Cesium.VerticalOrigin.TOP'
 
+class HeightReference(_CesiumEnum):
+    CLAMP_TO_GROUND = 'Cesium.HeightReference.CLAMP_TO_GROUND'
+    RELATIVE_TO_GROUND = 'Cesium.HeightReference.RELATIVE_TO_GROUND'
+    NONE = 'Cesium.HeightReference.NONE'
+
 
 class HorizontalOrigin(_CesiumEnum):
 
